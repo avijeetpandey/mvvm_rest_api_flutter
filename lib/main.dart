@@ -6,7 +6,7 @@ void main() {
   runApp(
     const MaterialApp(
       title: 'MvvmExample',
-      initialRoute: RouteNames.home,
+      initialRoute: RouteNames.login,
       onGenerateRoute: Routes.generateRoutes,
     ),
   );
