@@ -42,9 +42,9 @@ class NetworkApiService implements BaseApiServices {
 
     dynamic responseJson;
     try {
-      final response = await http
-          .post(Uri.parse(url), body: data)
-          .timeout(const Duration(seconds: 10));
+      final response = await http.post(Uri.parse(url), body: data).timeout(
+            const Duration(seconds: 10),
+          );
 
       responseJson = returnResponse(response);
     } on SocketException {
