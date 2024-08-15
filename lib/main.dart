@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_rest_api_flutter/root.dart';
+import 'package:mvvm_rest_api_flutter/routes/route_names.dart';
+import 'package:mvvm_rest_api_flutter/routes/routes.dart';
 
 void main() {
   runApp(
     const MaterialApp(
-      home: Scaffold(
-        body: MvvmExampleApplication(),
-      ),
+      title: 'MvvmExample',
+      initialRoute: RouteNames.home,
+      onGenerateRoute: Routes.generateRoutes,
     ),
   );
 }

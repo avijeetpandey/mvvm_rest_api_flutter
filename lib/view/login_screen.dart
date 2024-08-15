@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_rest_api_flutter/routes/route_names.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -10,8 +11,15 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("login screen"),
+    return Scaffold(
+      body: Center(
+        child: InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, RouteNames.home);
+          },
+          child: const Text('Login'),
+        ),
+      ),
     );
   }
 }
